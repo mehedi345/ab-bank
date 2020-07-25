@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AB Bank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>welcome to ab-bank</h1>
+    <section id="login-area">
+        <h1 class="text-center">Welcome to AB Bank</h1>
+        <div class="submit">
+            <h4>login</h4>
+            <input type="email" class="form-control" placeholder="email">
+            <br>
+            <input type="password" class="form-control" placeholder="password">
+            <br>
+            <button id="login-btn" class="btn btn-success">Enter</button>
+        </div>
+    </section>
+
+    <section id="transaction-area">
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit status ">
+                    <h5>deposit</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw status">
+                    <h5>withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="balance status">
+                    <h5>balance</h5>
+                    <h2>$1240</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 submit">
+                <h5>deposit</h5>
+                <input type="text" class="form-control mb-4" placeholder="$you want to withdraw">
+                <button class="btn btn-success">deposit</button>
+            </div>
+            <div class="col-md-6 submit">
+                <h5>withdraw</h5>
+                <input type="text" class="form-control mb-4" placeholder="$you want to withdraw">
+                <button class="btn btn-success">withdraw</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <script>
+
+        // login button event handler
+
+        const loginBtn = document.getElementById("login-btn");
+        loginBtn.addEventListener("click", function () {
+            const loginArea = document.getElementById("login-area");
+            loginArea.style.display = "none";
+
+            const transactionArea = document.getElementById("transaction-area");
+            transactionArea.style.display = "block";
+        });
+    </script>
 </body>
+
 </html>
